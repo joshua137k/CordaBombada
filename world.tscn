@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvtxcsfliky1m"]
+
+[ext_resource type="Script" path="res://RopeMy.gd" id="1_1v1si"]
+[ext_resource type="PackedScene" uid="uid://bjabkt6lqu72" path="res://pin.tscn" id="2_or1vx"]
+
+[node name="World" type="Node2D"]
+
+[node name="Rope" type="Node2D" parent="." groups=["Rope"]]
+script = ExtResource("1_1v1si")
+
+[node name="Line2D" type="Line2D" parent="Rope"]
+
+[node name="Pin" parent="." instance=ExtResource("2_or1vx")]
+position = Vector2(79, 288)
+
+[node name="PinLast" parent="." instance=ExtResource("2_or1vx")]
+position = Vector2(1018, 270)
+id = 2
